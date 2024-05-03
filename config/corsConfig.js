@@ -5,8 +5,8 @@
 const devWhitelist = ["http://localhost:3000"];
 
 const corsDevOptions = {
-  origin: function (origin, callback) {
-    if (!origin || devWhitelist.indexOf(origin) !== -1) {
+  origin: function (aorigin, callback) {
+    if (!aorigin || devWhitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
